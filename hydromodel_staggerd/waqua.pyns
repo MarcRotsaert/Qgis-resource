@@ -1,0 +1,41 @@
+# PynSource Version 1.2
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin. Comments are saved.'}
+{'type':'umlshape', 'id':'Opening', 'x':467, 'y':360, 'width':146, 'height':138, 'attrs': 'Lijn|plot_openingtype', 'meths': '__init__|_plot_openingtype|add_boundary'}
+{'type':'umlshape', 'id':'Curve', 'x':327, 'y':372, 'width':74, 'height':90, 'attrs': 'Lijn', 'meths': '__init__'}
+{'type':'umlshape', 'id':'Barrier', 'x':5, 'y':332, 'width':170, 'height':122, 'attrs': 'Lijn', 'meths': '__init__|add_puntcurve|return_defpointcurve'}
+{'type':'umlshape', 'id':'Schotje', 'x':829, 'y':347, 'width':80, 'height':90, 'attrs': 'Lijn', 'meths': '__init__'}
+{'type':'umlshape', 'id':'Overlaat', 'x':935, 'y':81, 'width':218, 'height':218, 'attrs': 'Lijn|parameters', 'meths': '__init__|_return_array|_return_correspondoverlaat|check_overlaattype|make_overlaatfile|plot_lijnkleur|set_typezero|set_uvparameter'}
+{'type':'umlshape', 'id':'Ruwheidarea', 'x':942, 'y':351, 'width':170, 'height':106, 'attrs': 'Lijn', 'meths': '__init__|make_ruwheidareafile'}
+{'type':'umlshape', 'id':'Enclosure', 'x':1411, 'y':68, 'width':114, 'height':186, 'attrs': 'mn_coor|path|vertices', 'meths': '__init__|_cleanencl|findcells|plot_lijn|return_xycoor'}
+{'type':'umlshape', 'id':'_BasisLijn_P1P2', 'x':212, 'y':69, 'width':160, 'height':106, 'attrs': 'plot_naam', 'meths': '_check_LijnP1P2|add_punt'}
+{'type':'umlshape', 'id':'_BasisLijn', 'x':610, 'y':14, 'width':170, 'height':186, 'attrs': 'Lijn|uvtype', 'meths': '__getitem__|__init__|_check_lijn|_return_mn2lijnindex|plot_lijn|return_xy'}
+{'type':'umlshape', 'id':'object', 'x':1408, 'y':443, 'width':70, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'umlshape', 'id':'Path', 'x':1227, 'y':230, 'width':50, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'umlshape', 'id':'_BasisLijnPunt', 'x':29, 'y':22, 'width':150, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'umlshape', 'id':'color_scheme', 'x':876, 'y':536, 'width':170, 'height':96, 'attrs': 'commentcoloring|endcoloring|startinlezencoloring', 'meths': ''}
+{'type':'umlshape', 'id':'veld', 'x':905, 'y':679, 'width':90, 'height':96, 'attrs': '', 'meths': 'box|getdatamat|rgf'}
+{'type':'umlshape', 'id':'tijdreeks', 'x':1071, 'y':726, 'width':210, 'height':144, 'attrs': '', 'meths': 'adobs|getdatacsv|getdatacsv_barrier|timeseries_irregular|timeseries_irregular_wind|timeseries_regular'}
+{'type':'umlshape', 'id':'lijn', 'x':1402, 'y':786, 'width':90, 'height':144, 'attrs': '', 'meths': 'barrier|boundary|checkcurve|closeuv|curve|opening'}
+{'type':'umlshape', 'id':'route', 'x':1764, 'y':609, 'width':82, 'height':122, 'attrs': 'Path', 'meths': '__init__|enclosure|lines'}
+{'type':'umlshape', 'id':'punt', 'x':1593, 'y':768, 'width':98, 'height':128, 'attrs': '', 'meths': 'checkpoint|dam|overlaat|point|ruwheidarea'}
+{'type':'edge', 'id':'Barrier_to__BasisLijn_P1P2', 'source':'Barrier', 'target':'_BasisLijn_P1P2', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Schotje_to__BasisLijn', 'source':'Schotje', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Curve_to__BasisLijn', 'source':'Curve', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Curve_to__BasisLijn_P1P2', 'source':'Curve', 'target':'_BasisLijn_P1P2', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Enclosure_to_object', 'source':'Enclosure', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Ruwheidarea_to__BasisLijn', 'source':'Ruwheidarea', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Overlaat_to__BasisLijn', 'source':'Overlaat', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Opening_to__BasisLijn', 'source':'Opening', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Barrier_to__BasisLijn', 'source':'Barrier', 'target':'_BasisLijn', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Opening_to__BasisLijn_P1P2', 'source':'Opening', 'target':'_BasisLijn_P1P2', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'Path_to_Enclosure', 'source':'Path', 'target':'Enclosure', 'uml_edge_type': 'composition'}
+{'type':'edge', 'id':'Overlaat_to_Overlaat', 'source':'Overlaat', 'target':'Overlaat', 'uml_edge_type': 'composition'}
+{'type':'edge', 'id':'Opening_to_Opening', 'source':'Opening', 'target':'Opening', 'uml_edge_type': 'composition'}
+{'type':'edge', 'id':'_BasisLijn_P1P2_to__BasisLijnPunt', 'source':'_BasisLijn_P1P2', 'target':'_BasisLijnPunt', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'_BasisLijn_to_object', 'source':'_BasisLijn', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'tijdreeks_to_object', 'source':'tijdreeks', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'route_to_object', 'source':'route', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'lijn_to_object', 'source':'lijn', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'color_scheme_to_object', 'source':'color_scheme', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'veld_to_object', 'source':'veld', 'target':'object', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'punt_to_object', 'source':'punt', 'target':'object', 'uml_edge_type': 'generalisation'}

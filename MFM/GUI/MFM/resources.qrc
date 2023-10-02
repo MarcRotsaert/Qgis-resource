@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/MFM" >
+        <file>icon_svasek.png</file>
+    </qresource>
+</RCC>

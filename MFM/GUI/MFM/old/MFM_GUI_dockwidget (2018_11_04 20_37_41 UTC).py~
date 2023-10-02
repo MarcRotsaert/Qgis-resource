@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+"""
+/***************************************************************************
+ MFMDockWidget
+                                 A QGIS plugin
+ 1e MFM
+                             -------------------
+        begin                : 2016-11-18
+        git sha              : $Format:%H$
+        copyright            : (C) 2016 by mro
+        email                : rotsaert@svasek.nl
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+"""
+
+import os
+from qgis.utils import iface
+import MaakFinelMesh as MFM
+
+from PyQt4 import QtGui, uic
+from PyQt4.QtCore import pyqtSignal
+
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'MFM_GUI_dockwidget_0.2.ui'))
+
+
+class MFMDockWidget(QtGui.QDockWidget, FORM_CLASS):
+
+	closingPlugin = pyqtSignal()
+
+	def __init__(self, parent=None):
+		"""Constructor."""
+		super(MFMDockWidget, self).__init__(parent)
+		# Set up the user interface from Designer.
+		# After setupUI you can access any designer object by doing
+		# self.<objectname>, and you can use autoconnect slots - see
+		# http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
+		# #widgets-and-dialogs-with-auto-connect
+		self.setupUi(self)
+		self.actions = []
+		self.pluginIsActive = True
+		#self.dockwidget = None
+		pb=self.pushButton
+		#pb.clicked.connect(MFM.TriangleInvoerLijn('MFMGUI_default','D:/TEMP3').startTriangleinvoer)
+		pb.clicked.connect(self.activate1)
+		pb_2=self.pushButton_2
+		pb_2.clicked.connect(self.activate2)
+		
+		#self.activate()
+
+	def closeEvent(self, event):
+		self.closingPlugin.emit()
+		event.accept()
+	def activate1(self):
+		MFM.TriangleInvoerLijn('MFMGUI_default','D:/TEMP3').startTriangleinvoer()
+	def activate2(self):
+		MFM.Mesh('MFMGUI_default','D:/TEMP3',iface.activeLayer()).integraalMesh('exp','Triangle_2_beta')
+		
+		
